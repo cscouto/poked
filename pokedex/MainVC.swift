@@ -69,6 +69,16 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail"{
+            if let destinantion = segue.destination as? PokemonDetailVC{
+                if let pokemon = sender as? Pokemon{
+                    destinantion.pokemon = pokemon
+                }
+            }
+        }
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if searchBar.text == nil || searchBar.text == ""{
@@ -111,6 +121,15 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        var poke: Pokemon!
+        
+        if inSearchMode{
+            poke = filteredPokemon[indexPath.row]
+        }else{
+            poke = pokemons[indexPath.row]
+        }
+        
+        performSegue(withIdentifier: "toDetail", sender: poke)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

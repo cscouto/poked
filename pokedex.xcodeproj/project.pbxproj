@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C1734FA1E328707001A4D63 /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1734F91E328707001A4D63 /* PokemonDetailVC.swift */; };
 		8C2CF3E21E323F3700A374FC /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2CF3E11E323F3700A374FC /* csv.swift */; };
 		8C2CF3E41E32448E00A374FC /* pokemon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C2CF3E31E32448E00A374FC /* pokemon.ttf */; };
 		8C5F15A41E322504005CF209 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F15A31E322504005CF209 /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C1734F91E328707001A4D63 /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 		8C2CF3E11E323F3700A374FC /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		8C2CF3E31E32448E00A374FC /* pokemon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = pokemon.ttf; sourceTree = "<group>"; };
 		8C5F15A01E322504005CF209 /* pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				8C5F15A51E322505005CF209 /* MainVC.swift */,
+				8C1734F91E328707001A4D63 /* PokemonDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				8C5F15BC1E3233C8005CF209 /* PokeCell.swift in Sources */,
 				8C5F15A61E322505005CF209 /* MainVC.swift in Sources */,
 				8C5F15A41E322504005CF209 /* AppDelegate.swift in Sources */,
+				8C1734FA1E328707001A4D63 /* PokemonDetailVC.swift in Sources */,
 				8C5F15B91E3229DE005CF209 /* Pokemon.swift in Sources */,
 				8C2CF3E21E323F3700A374FC /* csv.swift in Sources */,
 			);
