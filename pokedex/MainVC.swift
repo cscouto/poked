@@ -12,18 +12,41 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var pokemons = [Pokemon]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        parsePokemonCSV()
+    }
+    
+    func parsePokemonCSV(){
+        let path = Bundle.main.path(forResource: "pokemon", ofType: "csv")!
+        
+        do{
+            let csv = try CSV(contentsOfURL: path)
+            let rows = csv.rows
+            
+            for row in rows {
+                let pokeId = Int(row["id"]!)!
+                let name = row["identifier"]!
+                
+                let pokemon = Pokemon(name: name, pokedexId: pokeId)
+                pokemons.append(pokemon)
+            }
+        }catch{
+            
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "pokeCell", for: indexPath) as? PokeCell{
             
-            let pokemon  = Pokemon(name: "Pokemon", pokedexId: indexPath.row)
+            let pokemon  = pokemons[indexPath.row]
             cell.configureCell(pokemon: pokemon)
             
             return cell
@@ -37,7 +60,7 @@ class MainVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return pokemons.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
