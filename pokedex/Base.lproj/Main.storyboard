@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,7 +39,8 @@
                                 <rect key="frame" x="0.0" y="109" width="375" height="558"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="m2A-ZW-Ll1">
-                                <rect key="frame" x="36" y="129" width="303" height="518"/>
+                                <rect key="frame" x="20" y="129" width="335" height="518"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eJv-Gb-dXX">
                                     <size key="itemSize" width="105" height="105"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -48,14 +48,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uHe-Qs-8Ca">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pokeCell" id="uHe-Qs-8Ca" customClass="PokeCell" customModule="pokedex" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="tjV-5T-dtA">
+                                                <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="tjV-5T-dtA">
                                                     <rect key="frame" x="0.0" y="0.0" width="105" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="75s-zi-ik6"/>
@@ -80,6 +80,10 @@
                                             <constraint firstItem="tjV-5T-dtA" firstAttribute="leading" secondItem="uHe-Qs-8Ca" secondAttribute="leading" id="qYM-L9-vbt"/>
                                             <constraint firstItem="tjV-5T-dtA" firstAttribute="top" secondItem="uHe-Qs-8Ca" secondAttribute="top" id="wkp-IT-4IG"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="nDl-UN-Ieh" id="8Yu-b5-xdz"/>
+                                            <outlet property="thumbImage" destination="tjV-5T-dtA" id="Qpo-Bk-lp1"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -89,19 +93,22 @@
                             <constraint firstAttribute="trailing" secondItem="Ru5-aF-mH0" secondAttribute="trailing" id="2Iu-KG-qfV"/>
                             <constraint firstItem="tF9-hK-P3W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2cb-bI-HON"/>
                             <constraint firstAttribute="trailing" secondItem="tF9-hK-P3W" secondAttribute="trailing" id="2pd-I4-EKl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="m2A-ZW-Ll1" secondAttribute="trailing" constant="20" id="4Vx-75-22j"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m2A-ZW-Ll1" secondAttribute="bottom" constant="20" id="8Bf-ay-8GR"/>
                             <constraint firstItem="cLS-yh-62s" firstAttribute="top" secondItem="Ru5-aF-mH0" secondAttribute="bottom" id="9xg-kW-7hB"/>
+                            <constraint firstItem="m2A-ZW-Ll1" firstAttribute="top" secondItem="Ru5-aF-mH0" secondAttribute="bottom" constant="20" id="Enf-H0-l7n"/>
                             <constraint firstItem="tF9-hK-P3W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MeS-97-nmE"/>
-                            <constraint firstItem="m2A-ZW-Ll1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Yr5-QW-L53"/>
                             <constraint firstItem="Ru5-aF-mH0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="a2T-B4-hh0"/>
                             <constraint firstItem="Ru5-aF-mH0" firstAttribute="top" secondItem="tF9-hK-P3W" secondAttribute="bottom" id="aOT-IQ-eJj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m2A-ZW-Ll1" secondAttribute="bottom" constant="20" id="hcs-7f-6zN"/>
                             <constraint firstItem="cLS-yh-62s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kyq-WI-JL2"/>
                             <constraint firstAttribute="bottom" secondItem="cLS-yh-62s" secondAttribute="bottom" id="rim-D3-ZlK"/>
+                            <constraint firstAttribute="trailing" secondItem="m2A-ZW-Ll1" secondAttribute="trailing" constant="20" id="tr7-Aa-mck"/>
                             <constraint firstAttribute="trailing" secondItem="cLS-yh-62s" secondAttribute="trailing" id="uVj-FA-mkB"/>
-                            <constraint firstItem="m2A-ZW-Ll1" firstAttribute="top" secondItem="Ru5-aF-mH0" secondAttribute="bottom" constant="20" id="zrY-fb-80V"/>
+                            <constraint firstItem="m2A-ZW-Ll1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="xdT-VE-nPf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="m2A-ZW-Ll1" id="fhC-LA-SKB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
