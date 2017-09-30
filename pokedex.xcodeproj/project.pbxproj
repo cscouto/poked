@@ -20,6 +20,7 @@
 		8C5F15B61E322966005CF209 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8C5F15B51E322966005CF209 /* pokemon.csv */; };
 		8C5F15B91E3229DE005CF209 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F15B81E3229DE005CF209 /* Pokemon.swift */; };
 		8C5F15BC1E3233C8005CF209 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F15BB1E3233C8005CF209 /* PokeCell.swift */; };
+		FAC410961F7FFE93001A2EC0 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAC410951F7FFE93001A2EC0 /* music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		8C5F15B81E3229DE005CF209 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		8C5F15BB1E3233C8005CF209 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		A422F632BF213BBAD518CE52 /* Pods-pokedex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokedex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pokedex/Pods-pokedex.debug.xcconfig"; sourceTree = "<group>"; };
+		FAC410951F7FFE93001A2EC0 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		8C2CF3E61E3244AB00A374FC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FAC410951F7FFE93001A2EC0 /* music.mp3 */,
 				8C5F15B51E322966005CF209 /* pokemon.csv */,
 				8C2CF3E31E32448E00A374FC /* pokemon.ttf */,
 			);
@@ -215,6 +218,7 @@
 			files = (
 				8C2CF3E41E32448E00A374FC /* pokemon.ttf in Resources */,
 				8C5F15AE1E322505005CF209 /* LaunchScreen.storyboard in Resources */,
+				FAC410961F7FFE93001A2EC0 /* music.mp3 in Resources */,
 				8C5F15AB1E322505005CF209 /* Assets.xcassets in Resources */,
 				8C5F15B61E322966005CF209 /* pokemon.csv in Resources */,
 				8C5F15A91E322505005CF209 /* Main.storyboard in Resources */,

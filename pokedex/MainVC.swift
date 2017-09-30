@@ -54,8 +54,8 @@ class MainVC: UIViewController {
         let path = Bundle.main.path(forResource: "music", ofType: "mp3")!
         do{
             musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path)!)
-            musicPlayer.numberOfLoops = -1
             musicPlayer.prepareToPlay()
+            musicPlayer.numberOfLoops = -1
             musicPlayer.play()
         }catch{}
     }
