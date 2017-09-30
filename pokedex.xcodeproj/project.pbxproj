@@ -184,6 +184,7 @@
 				TargetAttributes = {
 					8C5F159F1E322504005CF209 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7TW6282C6A;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -403,6 +404,7 @@
 			baseConfigurationReference = A422F632BF213BBAD518CE52 /* Pods-pokedex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7TW6282C6A;
 				INFOPLIST_FILE = pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coutocode.pokedex;
@@ -416,6 +418,7 @@
 			baseConfigurationReference = 881882AC4CE722B3FBFEC577 /* Pods-pokedex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7TW6282C6A;
 				INFOPLIST_FILE = pokedex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coutocode.pokedex;
